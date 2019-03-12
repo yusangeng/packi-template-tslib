@@ -1,6 +1,6 @@
 {
   "name": "<%= projectName %>",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
   "jsnext:main": "src/index.ts",
@@ -10,7 +10,7 @@
     "test": "nyc mocha --require ts-node/register test/*.spec.ts",
     "coverage": "nyc report --reporter=lcov",
     "es5": "rm -rf ./lib && tsc -p tsconfig.json",
-    "prepublish": "npm run test && npm run es5",
+    "prepublishOnly": "npm run test && npm run es5",
     "ci": "npm run test && npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
