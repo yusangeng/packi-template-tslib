@@ -1,5 +1,5 @@
 {
-  "name": "@haier/aaa",
+  "name": "@haier/<%= projectName %>",
   "version": "0.1.0",
   "description": "A typescript library.",
   "main": "lib/index.js",
