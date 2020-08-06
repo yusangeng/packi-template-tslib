@@ -1,7 +1,7 @@
 {
-  "name": "<%= projectName %>",
+  "name": "@haier/<%= projectName %>",
   "version": "0.1.0",
-  "description": "",
+  "description": "A typescript library.",
   "main": "lib/index.js",
   "jsnext:main": "src/index.ts",
   "types": "lib/",
@@ -11,17 +11,16 @@
     "test": "nyc mocha --require ts-node/register test/*.spec.ts",
     "coverage": "nyc report --reporter=lcov",
     "es5": "rm -rf ./lib && tsc -p tsconfig.json",
-    "prepublish": "npm run test && npm run es5",
-    "ci": "npm run test && npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "prepublish": "npm run test && npm run es5"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yusangeng/<%= projectName %>.git"
+    "url": "http://adp-gitlab.haier.net/operation-dts-front/<%= projectName %>.git"
   },
   "keywords": [],
   "author": {
-    "name": "yusangeng",
-    "email": "yusangeng@outlook.com"
+    "name": "ligen",
+    "email": "ligen@haier.com"
   },
   "license": "MIT",
   "devDependencies": {
@@ -63,5 +62,8 @@
       "html"
     ],
     "all": true
+  },
+  "publishConfig": {
+    "registry": "http://nexus.paas-pro.haier.net/repository/dts-npm/"
   }
 }
