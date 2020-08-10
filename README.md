@@ -7,7 +7,7 @@
 ## 安装
 
 ```bash
-npm install <%= projectName %> --save
+npm install @haier/<%= projectName %> --save --registry=http://nexus.paas-pro.haier.net/repository/dts-npm-goup/
 ```
 
 ## 使用
