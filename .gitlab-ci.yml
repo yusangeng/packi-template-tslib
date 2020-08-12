@@ -1,32 +1,16 @@
 image: registry.cn-hangzhou.aliyuncs.com/choerodon-tools/cifront:0.7.0
 
 stages:
-  - prepare
   - test
-  - build
-  - deploy
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-prepare:
-  stage: prepare
-  script:
-    - npm config set registry http://nexus.paas-pro.haier.net/repository/dts-npm-group/
-    - npm i @haier/packi -g
-    - npm i
-
 test:
   stage: test
   script:
-    - npm run lint && npm test
-
-build:
-  stage: build
-  script:
+    - npm config set registry http://nexus.paas-pro.haier.net/repository/dts-npm-group/
+    - npm i
+    - npm run lint
+    - npm test
     - npm run es5
-
-deploy:
-  stage: deploy
-  script:
-    - echo "Task deploy should be customed by project owner."
