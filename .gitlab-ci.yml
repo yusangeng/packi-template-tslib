@@ -1,4 +1,5 @@
-image: registry.cn-hangzhou.aliyuncs.com/choerodon-tools/cifront:0.7.0
+image: registry.cn-hangzhou.aliyuncs.com/yx-repo/yunxicibase:0.3.0-debian
+
 
 stages:
   - test
