@@ -44,3 +44,4 @@ lib
 doc
 package-lock.json
 yarn.lock
+.publish
