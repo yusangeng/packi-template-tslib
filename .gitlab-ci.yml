@@ -1,17 +1,18 @@
 image: registry.cn-hangzhou.aliyuncs.com/yx-repo/yunxicibase:0.3.0-debian
 
-
 stages:
-  - test
+  - deploy
 
-variables:
-  GIT_SUBMODULE_STRATEGY: recursive
-
-test:
-  stage: test
+deploy:
+  only:
+    - /^master$/
+  stage: deploy
   script:
+    - node -v
     - npm config set registry http://nexus.paas-pro.haier.net/repository/dts-npm-group/
-    - npm i
-    - npm run lint
-    - npm test
-    - npm run es5
+    - npm i @haier/packi
+    - mkdir .publish
+    - npx packi gen-npm-package-badge
+    - cp README.md .publish
+    - cp package.json .publish
+    - npx packi cloud-deploy
