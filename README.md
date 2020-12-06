@@ -10,7 +10,7 @@
 
 ```shell
 npm i nrm -g
-nrm add haier http://nexus.paas-pro.haier.net/repository/dts-npm-group/
+nrm add haier http://npm.haier.net/
 nrm use haier
 ```
 
