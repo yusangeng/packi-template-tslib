@@ -1,6 +1,15 @@
-node_modules
 coverage
 .nyc_output
 .vscode
 package-lock.json
 yarn.lock
+src
+test
+.temp
+tsconfig.json
+.gitignore
+.npmignore
+.eslintrc.js
+.prettierignore
+.prettierrc.js
+.DS_Store
