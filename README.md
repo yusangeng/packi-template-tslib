@@ -1,23 +1,13 @@
 # <%= projectName %>
 
-[![NPM Version](https://cdn.haier.net/assets/overlay/dts-fe/<%= projectName %>/npm-package-badge.svg)](http://nexus.paas-pro.haier.net/#browse/browse:dts-npm-group:%40haier%2F<%= projectName %>) [![TypeScript](https://img.shields.io/badge/lang-typescript-blue.svg)](https://www.tslang.cn/)
+[![TypeScript](https://img.shields.io/badge/lang-typescript-blue.svg)](https://www.tslang.cn/) [![Build Status](https://travis-ci.org/yusangeng/<%= projectName %>.svg?branch=master)](https://travis-ci.org/yusangeng/<%= projectName %>) [![Coverage Status](https://coveralls.io/repos/github/yusangeng/<%= projectName %>/badge.svg?branch=master)](https://coveralls.io/github/yusangeng/<%= projectName %>?branch=master) [![Npm Package Info](https://badge.fury.io/js/<%= projectName %>.svg)](https://www.npmjs.com/package/<%= projectName %>) [![Downloads](https://img.shields.io/npm/dw/<%= projectName %>.svg?style=flat)](https://www.npmjs.com/package/<%= projectName %>)
 
 ## 综述
 
 ## 安装
 
-在安装 <%= projectName %> 之前, 请确保 npm 源配置为 IT 平台公用 npm 源:
-
 ```shell
-npm i nrm -g
-nrm add haier http://npm.haier.net/
-nrm use haier
-```
-
-安装:
-
-```bash
-npm i @haier/<%= projectName %> --save 
+npm i <%= projectName %> --save 
 ```
 
 ## 使用
