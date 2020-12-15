@@ -54,8 +54,5 @@
       "html"
     ],
     "all": true
-  },
-  "publishConfig": {
-    "registry": "https://registory.npmjs.org/"
   }
 }
