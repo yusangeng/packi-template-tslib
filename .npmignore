@@ -9,7 +9,8 @@ test
 tsconfig.json
 .gitignore
 .npmignore
-.eslintrc.js
+.eslintrc.cjs
 .prettierignore
 .prettierrc.js
 .DS_Store
+.github

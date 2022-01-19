@@ -1,5 +1,7 @@
 /**
  * 入口文件
  *
- * @author
+ * @author yusangeng@outlook.com
  */
+
+export const theAnswer = 42;
