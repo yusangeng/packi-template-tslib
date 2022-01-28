@@ -18,7 +18,7 @@
     "coverage": "nyc report --reporter=lcov",
     "esm": "tsc -p tsconfig.esm.json",
     "cjs": "tsc -p tsconfig.cjs.json",
-    "build": "npm run clear && npm run cjs",
+    "build": "npm run clear && npm run esm && npm run cjs",
     "clear": "rm -rf .nyc_output cjs coverage esm",
     "prepublishOnly": "npm run test && npm run build",
     "ci": "npm run lint && npm run build && npm run test && npm run coverage"
