@@ -16,9 +16,10 @@
     "lint": "eslint --fix ./src && prettier --write ./src",
     "test": "cross-env TS_NODE_PROJECT='./tsconfig.test.json' nyc mocha",
     "coverage": "nyc report --reporter=lcov",
-    "esm": "rm -rf ./esm && rm -rf types && tsc -p tsconfig.esm.json",
-    "cjs": "rm -rf ./cjs && tsc -p tsconfig.cjs.json",
-    "build": "npm run esm && npm run cjs",
+    "esm": "tsc -p tsconfig.esm.json",
+    "cjs": "tsc -p tsconfig.cjs.json",
+    "build": "npm run clear && npm run cjs",
+    "clear": "rm -rf .nyc_output cjs coverage esm",
     "prepublishOnly": "npm run test && npm run build",
     "ci": "npm run lint && npm run build && npm run test && npm run coverage"
   },
